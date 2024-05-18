@@ -1,6 +1,8 @@
-# main.py
-def add(a, b):
-    return a + b
+import arithmetic
+import data
 
-def subtract(a, b):
-    return a - b
+def calculate(number):
+    return number - 5
+
+print(calculate(data.large))
+print(arithmetic.calculate(data.large))

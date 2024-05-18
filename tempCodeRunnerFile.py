@@ -1,0 +1,1 @@
+print('{adjective} {color} {thing}'.format(adjective = 'wide', color = 'pink', thing = 'car'))
