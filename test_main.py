@@ -264,3 +264,374 @@ print('{1} {2} {0}'.format(thing, adjective, color))
 
 
 print('{adjective} {color} {thing}'.format(adjective = 'wide', color = 'pink', thing = 'car'))
+
+
+
+number = 3
+new_number = number * 4
+print(new_number)
+
+
+number = 1.0
+new_number = number * 5.0
+print(new_number)
+
+
+
+number = 4.0
+new_number = number * 1
+print(new_number)
+
+
+
+number = 5.8
+new_number = int(number)
+print(new_number)
+
+
+
+number = 5
+new_number = float(number)
+print(new_number)
+
+
+
+number_string = input()
+number_float = float(number_string)
+number_int = int(number_float)
+print(number_string)
+print(number_float)
+print(number_int)
+
+
+
+colors = ['red', 'blue', 'cyan', 'grey']
+for color in colors:
+    print(color)
+    
+    
+
+word = 'Cache'
+for char in word:
+    print(char, end='_')
+print()
+
+
+
+weights = [3, 1, 4, 2]
+result = 0
+for weight in weights:
+    result -= weight
+print(result)
+
+
+
+colors = ['blue', 'grey', 'pink', 'tan']
+for color in reversed(colors):
+    print(color)
+    
+
+
+cities = {
+    'Austin': 982,
+    'Nairobi': 584,
+    'Chicago': 550,
+    'London': 5259,
+}
+
+best = ''
+distance = 0
+for city in cities:
+    if cities[city] > distance:
+        best = city
+        distance = cities[city]
+print(best, distance)
+
+
+
+count = 0
+for i in range(2):
+   for j in range(4):
+      count = count + 1
+print(count)
+
+
+
+count = 0
+for i in range(4, 6):
+   for j in range(5):
+      count = count + 1
+print(count)
+
+
+
+
+i = 0
+count = 0
+while i < 3:
+   for j in range(4):
+      count = count + 1
+   i = i + 1
+print(count)
+
+
+
+
+letter1 = 'j'
+while letter1 < 'l':
+    letter2 = 's'
+    while letter2 <= 't':
+        print(f'{letter1}{letter2}')
+        letter2 = chr(ord(letter2) + 1)
+    letter1 = chr(ord(letter1) + 1)
+    
+    
+    
+
+i = 2
+while i < 15:
+    j = 3
+    while j <= 10:
+        print(f'{i}{j}')
+        j = j + 5
+    i = i + 20
+    
+    
+    
+num_rows = int(input())
+num_columns = int(input())
+
+# Outer loop for rows
+for i in range(1, num_rows + 1):
+    # Inner loop for columns
+    for j in range(num_columns):
+        # chr(65) is 'A', so adding j to 65 gives the letters in sequence
+        print(f'{i}{chr(65 + j)}', end=' ')
+    print()  # This will move to the next line after each row is completed
+
+
+
+
+
+item_info = 'Mug 7 19'
+
+item_tokens = item_info.split()
+item = item_tokens[0]
+quantity = item_tokens[1]
+price = item_tokens[2]
+
+print(f'{item} stock: {quantity}')
+print(f'Price: {price}')
+
+
+
+
+phone_number = '202-555-0106'
+
+separator = ';'
+phone_number_tokens = phone_number.split('-')
+print(separator.join(phone_number_tokens))
+
+
+
+
+class Person:
+   def __init__(self):
+      self.name = ''
+
+person1 = Person()
+username = 'Amy'
+
+person1.name = username
+print(f'You are {person1.name}')
+
+
+
+class Person:
+   def __init__(self):
+      self.name = ''
+
+person1 = Person()
+username = 'Ina'
+different_username = 'Ava'
+
+person1.name = username
+print(person1.name)
+person1.name = different_username
+print(person1.name)
+
+
+
+
+class Person:
+   def __init__(self):
+      self.first = ''
+      self.last = ''
+
+   def get_full_name(self):
+      return f'{self.last}, {self.first}'
+
+person1 = Person()
+user_first_name = 'Ina'
+user_last_name = 'Stark'
+
+person1.first = user_first_name
+person1.last = user_last_name
+print(person1.get_full_name())
+
+
+
+
+class Person:
+   def __init__(self):
+      self.first_name = ''
+
+   def print_name(self):
+      print(f'I am {self.first_name}')
+
+person1 = Person()
+person1.first_name = 'Joe'
+person1.print_name()
+
+
+
+class Person:
+   def __init__(self):
+      self.first_name = ''
+      self.last_name = ''
+
+   def get_full_name(self):
+      return '(' + self.last_name + ', ' + self.first_name + ')'
+
+user_first_name = 'Ron'
+user_last_name = 'Parker'
+
+person1 = Person()
+person1.first_name = user_first_name 
+person1.last_name = user_last_name 
+print(f'He is {person1.get_full_name()}')
+
+
+
+
+class Person:
+   def __init__(self):
+      self.first_name = ''
+
+   def get_first_name(self):
+      return self.first_name
+
+user_name = 'Joe'
+different_user_name = 'Max'
+
+person1 = Person()
+person1.first_name = user_name 
+print(f'He is not {person1.get_first_name()}')
+person1.first_name = different_user_name 
+print(f'He is {person1.get_first_name()}')
+
+
+
+
+class Person:
+   def __init__(self):
+      self.first_name = ''
+      self.last_name = ''
+
+   def get_full_name(self):
+      return '(' + self.last_name + ', ' + self.first_name + ')'
+
+a_first_name = 'Sue'
+another_first_name = 'Max'
+a_last_name = 'Wayne'
+another_last_name = 'Banner'
+
+person1 = Person()
+person2 = Person()
+
+person1.first_name = a_first_name
+person1.last_name = a_last_name
+person2.first_name = another_first_name
+person2.last_name = another_last_name
+
+print(f'You are {person1.get_full_name()}')
+print(f'I am {person2.get_full_name()}')
+
+
+
+
+class Shape:
+    def __init__(self):
+       self.color = None
+
+shape1 = Shape()
+shape2 = Shape()
+shape2.color = 'violet'
+
+print(shape1.color)
+print(shape2.color)
+
+
+
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+rectangle1 = Rectangle(4, 10)
+rectangle2 = Rectangle(6, 14)
+
+print(rectangle2.width)
+print(rectangle1.length)
+
+
+
+
+class Rectangle:
+    def __init__(self, length=10, width=7):
+        self.length = length
+        self.width = width
+
+rectangle1 = Rectangle(9)
+rectangle2 = Rectangle()
+rectangle3 = Rectangle(2, 12)
+
+print(rectangle2.length)
+print(rectangle3.length)
+print(rectangle1.length)
+
+
+
+
+class Rectangle:
+    def __init__(self, color, length=12, width=5):
+        self.color = color
+        self.length = length
+        self.width = width
+
+rectangle1 = Rectangle('black')
+rectangle2 = Rectangle('yellow', 5, 3)
+rectangle3 = Rectangle('blue', 9)
+
+print(rectangle1.color)
+print(rectangle1.width)
+print(rectangle2.width)
+print(rectangle3.width)
+
+
+
+
+class Rectangle:
+    def __init__(self, color, length=10, width=7):
+        self.color = color
+        self.length = length
+        self.width = width
+
+rectangle1 = Rectangle('green')
+rectangle2 = Rectangle('purple', width=5, length=1)
+rectangle3 = Rectangle('black', length=4, width=9)
+
+print(rectangle1.length, rectangle1.width)
+print(rectangle2.length, rectangle2.width)
+print(rectangle3.length, rectangle3.width)
