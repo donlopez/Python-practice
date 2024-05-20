@@ -635,3 +635,153 @@ rectangle3 = Rectangle('black', length=4, width=9)
 print(rectangle1.length, rectangle1.width)
 print(rectangle2.length, rectangle2.width)
 print(rectangle3.length, rectangle3.width)
+
+
+
+def change_value(x):
+    return x + 1
+
+print(change_value(4))
+
+
+
+def change_values(x, y):
+    return x + y
+
+print(change_values(1, 2))
+
+
+
+
+def change_values(x, y):
+    result = x + y
+    return result
+
+print(change_values(4, 1))
+
+
+
+
+class Shape:
+    def __init__(self):
+       self.color = None
+
+shape1 = Shape()
+shape2 = Shape()
+shape2.color = 'indigo'
+
+print(shape1.color)
+print(shape2.color)
+
+
+
+
+# "New" means new compared to previous level
+class Shape:
+    # New: Add class variable
+    default_color = 'violet'
+
+    def __init__(self):
+        self.color = None
+
+a_shape = Shape()
+print(a_shape.color)
+
+a_shape.color = Shape.default_color
+print(a_shape.color)
+
+a_shape.color = 'teal'
+print(a_shape.color)
+
+
+
+class Shape:
+    default_color = 'maroon'
+
+    def __init__(self):
+        self.color = None
+
+a_shape = Shape()
+a_shape.color = 'gray'
+
+print(Shape.default_color)
+print(a_shape.default_color)
+print(a_shape.color)
+
+
+
+# "New" means new compared to previous level
+class Shape:
+    default_color = 'indigo'
+
+    def __init__(self):
+        # New: change from None
+        self.color = self.default_color
+
+a_shape = Shape()
+print(a_shape.color)
+a_shape.color = 'gray'
+print(a_shape.color)
+
+
+class Shape:
+    default_color = 'maroon'
+
+    def __init__(self):
+        self.color = self.default_color
+
+shape1 = Shape()
+Shape.default_color = 'gray'
+shape2 = Shape()
+
+print(shape2.color)
+print(Shape.default_color)
+print(shape1.color)
+
+
+
+# "New" means new compared to previous level
+class Shape:
+    default_color = 'orange'
+    # New: Add class variable
+    background_color = 'white'
+
+    def __init__(self):
+        self.color = self.default_color
+
+    # New: Add instance method
+    def print_description(self):
+        print(f'{self.color} on {self.background_color}')
+
+a_shape = Shape()
+a_shape.print_description()
+
+a_shape.color = 'gold'
+a_shape.print_description()
+
+Shape.background_color = 'mocha'
+a_shape.print_description()
+
+
+
+# "New" means new compared to previous level
+class Shape:
+    default_color = 'violet'
+    # New: Change from background_color
+    count = 0
+
+    def __init__(self):
+        Shape.count += 1
+        self.number = self.count
+        self.color = self.default_color
+
+    def print_description(self):
+        print(f'{self.number} of {self.count} - {self.color}')
+
+shape1 = Shape()
+shape2 = Shape()
+shape2.color = 'maroon'
+
+print(Shape.count)
+shape1.print_description()
+shape2.print_description()
