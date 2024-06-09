@@ -1,21 +1,20 @@
-# "New" means new compared to previous level
-class Shape:
-    default_color = 'violet'
-    # New: Change from background_color
-    count = 0
+start_time = int(input())
+end_time = int(input())
 
-    def __init__(self):
-        Shape.count += 1
-        self.number = self.count
-        self.color = self.default_color
+print('Time steps:', end=' ')
 
-    def print_description(self):
-        print(f'{self.number} of {self.count} - {self.color}')
+for curr_time in range(start_time, end_time + 1, 4):
+    print(curr_time, end=' ')
+print()
 
-shape1 = Shape()
-shape2 = Shape()
-shape2.color = 'maroon'
 
-print(Shape.count)
-shape1.print_description()
-shape2.print_description()
+
+first_item = int(input())
+last_item = int(input())
+items_picked = 0
+
+for item in range(first_item, last_item + 1, 4):
+    print(f'Checking item: {item}')
+    items_picked += 1
+
+print(f'Total items picked: {items_picked}')
